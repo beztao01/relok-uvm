@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #e5e5e5; /* Fondo un poco más claro para que resalte el reloj negro */
+    background-color: #4b4b4b; /* Fondo gris obscuro para que resalte el reloj negro */
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Tipografía limpia como la imagen */
 }
 
