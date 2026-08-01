@@ -31,6 +31,8 @@ body {
     padding: 20px 30px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 2px 5px rgba(255,255,255,0.2);
+    /* ESTA LÍNEA ES NUEVA: Da el efecto de profundidad 3D */
+    perspective: 1000px;
 }
 
 /* Tarjetas individuales de horas y minutos */
@@ -88,3 +90,17 @@ body {
     align-self: flex-end;
     margin-bottom: 20px;
 }
+
+/* Clase que aplicaremos con JavaScript para hacer el giro */
+.flip-anim {
+    animation: flipCard 0.6s ease-in-out;
+}
+
+/* Animación de los fotogramas clave para el giro 3D */
+@keyframes flipCard {
+    0% { transform: rotateX(0deg); }
+    50% { transform: rotateX(-90deg); opacity: 0.8; }
+    50.1% { transform: rotateX(90deg); opacity: 0.8; }
+    100% { transform: rotateX(0deg); opacity: 1; }
+}
+
