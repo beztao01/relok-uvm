@@ -4,39 +4,87 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0f1115; /* Fondo oscuro exterior */
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    color: #ffffff;
+    background-color: #e5e5e5; /* Fondo un poco más claro para que resalte el reloj negro */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Tipografía limpia como la imagen */
 }
 
 .clock-container {
     text-align: center;
-    background: #1e2128; /* Fondo de la tarjeta */
-    padding: 40px 70px;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
 }
 
 #logo-container {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: center;
 }
 
-/* Asegura que el logo se adapte bien */
-#logo-container svg {
-    max-width: 250px;
-    height: auto;
+#logo-container svg text {
+    fill: #222; /* Logo oscuro para contrastar si el fondo es claro */
 }
 
-/* Estilos para el texto "LOGO UVM" si no hay SVG */
-#logo-container text {
-    fill: white;
-}
-
+/* Contenedor principal de los números */
 #clock {
-    font-size: 7rem;
-    font-weight: 700;
-    letter-spacing: 4px;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 2px 5px rgba(255,255,255,0.2);
+}
+
+/* Tarjetas individuales de horas y minutos */
+.flip-card {
+    background-color: #262729; /* Color de la paleta */
+    border-radius: 8px;
+    position: relative;
+    min-width: 130px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+
+/* La línea que corta el número por la mitad */
+.flip-card::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #1a1a1a; /* Mismo color que el fondo del reloj */
+    transform: translateY(-50%);
+    z-index: 10;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Estilo de los números */
+.number {
+    font-size: 8rem;
+    font-weight: 500;
+    color: #f0f0f0;
+    letter-spacing: -2px;
+}
+
+/* Indicador AM/PM de la esquina */
+#period {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #a0a0a0;
+    z-index: 20; /* Para que quede por encima de la línea */
+}
+
+/* El punto separador que aparece en tu imagen */
+.separator {
+    color: #f0f0f0;
+    font-size: 3rem;
+    margin: 0 10px;
+    align-self: flex-end;
+    margin-bottom: 20px;
 }
