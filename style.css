@@ -4,14 +4,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0f1115; /* Fondo oscuro */
+    background-color: #0f1115; /* Fondo oscuro exterior */
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     color: #ffffff;
 }
 
 .clock-container {
     text-align: center;
-    background: #1e2128;
+    background: #1e2128; /* Fondo de la tarjeta */
     padding: 40px 70px;
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
@@ -23,10 +23,15 @@ body {
     justify-content: center;
 }
 
-/* Asegura que el logo se adapte bien al tamaño */
+/* Asegura que el logo se adapte bien */
 #logo-container svg {
     max-width: 250px;
     height: auto;
+}
+
+/* Estilos para el texto "LOGO UVM" si no hay SVG */
+#logo-container text {
+    fill: white;
 }
 
 #clock {
