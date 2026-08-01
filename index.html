@@ -10,12 +10,25 @@
     <div class="clock-container">
         <div id="logo-container">
             <!-- PEGA AQUÍ TU CÓDIGO SVG DE LA UVM -->
-            <!-- EJEMPLO TEMPORAL (mientras pones el tuyo) -->
+            <!-- EJEMPLO TEMPORAL -->
             <svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <text x="10" y="40" fill="white" font-size="28" font-weight="bold" font-family="sans-serif">LOGO UVM</text>
             </svg>
         </div>
-        <div id="clock">--:--</div>
+        
+        <!-- Nuevo contenedor estilo Flip Clock -->
+        <div id="clock">
+            <div class="flip-card">
+                <span id="period">PM</span>
+                <div id="hours" class="number">--</div>
+            </div>
+            
+            <div class="separator">.</div>
+            
+            <div class="flip-card">
+                <div id="minutes" class="number">--</div>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
