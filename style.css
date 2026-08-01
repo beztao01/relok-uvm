@@ -87,13 +87,13 @@ body {
     z-index: 20; 
 }
 
-/* El punto separador */
+/* El punto separador actualizado a dos puntos */
 .separator {
     color: #f0f0f0;
-    font-size: 9rem; /* 3 veces más grande (antes 3rem) */
-    margin: 0 30px; /* (antes 10px) */
-    align-self: flex-end;
-    margin-bottom: 60px; /* (antes 20px) */
+    font-size: 12rem; /* Ajustamos el tamaño para que sea proporcional */
+    margin: 0 30px; 
+    align-self: center; /* Esto los centra perfectamente a la mitad de la altura */
+    transform: translateY(-5%); /* Pequeño ajuste óptico para alinear con los números */
 }
 
 /* --- ANIMACIÓN 3D --- */
