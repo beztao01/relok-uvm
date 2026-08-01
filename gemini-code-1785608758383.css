@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f1115; /* Fondo oscuro */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #ffffff;
+}
+
+.clock-container {
+    text-align: center;
+    background: #1e2128;
+    padding: 40px 70px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+#logo-container {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Asegura que el logo se adapte bien al tamaño */
+#logo-container svg {
+    max-width: 250px;
+    height: auto;
+}
+
+#clock {
+    font-size: 7rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
